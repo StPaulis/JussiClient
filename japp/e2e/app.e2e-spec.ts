@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('jussi-client App', () => {
+describe('japp App', () => {
   let page: AppPage;
 
   beforeEach(() => {

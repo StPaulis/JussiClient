@@ -1,0 +1,42 @@
+<div *ngFor="let data of dataArray">
+  <div class="col-sm-12">
+    <div class="SoilData">
+      <div *ngIf="data.DataTypeID == '1'">
+        <!-- <span rel="icon" type="image/x-icon" href="assets/icons/Icons8-Windows-8-Ecommerce-Temperature-Sensitive.ico"> -->
+        <h3>
+          <img src="assets/icons/Icons8-Windows-8-Ecommerce-Temperature-Sensitive.ico" alt="Temperature" width="50" height="50"> {{data.Value}} {{data.Unit}}
+        </h3>
+      </div>
+      <div *ngIf="data.DataTypeID == '2'">
+        <h3>
+          <img src="assets/icons/Icons8-Windows-8-Science-Humidity.ico" alt="Humidity" width="50" height="50"> {{data.Value}} {{data.Unit}}
+        </h3>
+      </div>
+      <h6>{{data.DateCreated | date:'dd/MM/yyyy HH:mm'}}</h6>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="col-sm-3">
+  <div class="button">
+      <!-- <input [ngModel]="status?.status" /> -->
+    <div *ngIf="!status?.status">
+      <button class="btn btn-sm btn-success" *ngIf="!status?.status" (click)="status.status = true" (click)="waterOn($event)">
+        Water
+        {{status?.status}}
+      </button>
+    </div>
+    <div>
+      <div *ngIf="status?.status">
+        <button class="btn btn-sm btn-success" *ngIf="status?.status" (click)="status.status = false"  (click)="waterOff($event)">
+          Stop
+          {{status.status}}
+        </button>
+
+      </div>
+    </div>
+  </div>
+  <div class="alert alert-danger" *ngIf="error">
+    {{ error }}
+  </div>
+</div>

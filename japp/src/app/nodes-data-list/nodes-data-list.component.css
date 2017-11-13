@@ -1,0 +1,27 @@
+.btn {
+    background-color: rgb(77, 75, 75);
+    border-color:  rgb(77, 75, 75);
+}
+
+.button {
+    padding:  10px 5px 15px 10px;
+    
+}
+
+image{
+    margin: auto;
+}
+.soilIcon {
+    padding:  10px 5px 15px 10px;
+    align-items: left ;
+}
+.SoilData{
+    padding:  10px 5px 15px 10px;
+    font-family: arial;
+    font-style: normal; 
+    font-size: xx-small;
+    font-weight: bold;
+    text-justify: kashida;
+    display: inline-block;
+    
+}
