@@ -6,20 +6,15 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { NodesDataListComponent } from './nodes-data-list/nodes-data-list.component';
 import { NodesDataService } from './services/nodes-data.service';
-import {
-  Router,
-  // import as RouterEvent to avoid confusion with the DOM Event
-  Event as RouterEvent,
-  NavigationStart,
-  NavigationEnd,
-  NavigationCancel,
-  NavigationError
-} from '@angular/router'
+import { PreferencesComponent } from './preferences/preferences.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NodesDataListComponent
+    NodesDataListComponent,
+    PreferencesComponent
   ],
   imports: [
     BrowserModule,

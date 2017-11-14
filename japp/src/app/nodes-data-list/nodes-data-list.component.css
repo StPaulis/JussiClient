@@ -1,28 +1,39 @@
 .btn {
-    background-color: rgb(180, 198, 206);
+    background-color: rgba(116, 245, 250, 0.13);
     border-color:  rgb(77, 75, 75);
+    border-inline-end-style: solid;
     color: black;
+    font-weight: bold;
+    font-family: serif;
 }
 
 .button {
     padding:  10px 5px 15px 10px;  
+
 }
 
 image{
     margin: auto;
 }
 .soilIcon {
-    padding:  10px 5px 15px 10px;
+    /* padding:  10px 5px 15px 10px; */
     align-items: left ;
 }
 .SoilData{
-    padding:  10px 5px 15px 10px;
-    font-family: arial;
+    /* padding:  10px 5px 15px 10px; */
+    font-family: serif;
     font-style: normal; 
     font-size: xx-small;
     font-weight: bold;
-    text-justify: kashida;
-    display: inline-block;
+    margin-left: 10px;
+    /* text-justify: kashida; */
+    /* display: inline-block; */
     
 }
+
+hr{
+    background-color: black;
+    border-color: black;
+}
+
 
