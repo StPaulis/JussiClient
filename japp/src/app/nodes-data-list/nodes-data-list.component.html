@@ -19,18 +19,15 @@
 <hr>
 <div class="col-sm-3">
   <div class="button">
-      <!-- <input [ngModel]="status?.status" /> -->
     <div *ngIf="!status?.status">
-      <button class="btn btn-sm btn-success" *ngIf="!status?.status" (click)="status.status = true" (click)="waterOn($event)">
+      <button class="btn btn-lg btn-danger" *ngIf="!status?.status" (click)="status.status = true" (click)="waterOn($event)">
         Water
-        {{status?.status}}
       </button>
     </div>
     <div>
       <div *ngIf="status?.status">
-        <button class="btn btn-sm btn-success" *ngIf="status?.status" (click)="status.status = false"  (click)="waterOff($event)">
+        <button class="btn btn-lg btn-danger" *ngIf="status?.status" (click)="status.status = false" (click)="waterOff($event)">
           Stop
-          {{status.status}}
         </button>
 
       </div>

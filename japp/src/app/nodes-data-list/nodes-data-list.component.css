@@ -1,11 +1,11 @@
 .btn {
-    background-color: rgb(77, 75, 75);
+    background-color: rgb(180, 198, 206);
     border-color:  rgb(77, 75, 75);
+    color: black;
 }
 
 .button {
-    padding:  10px 5px 15px 10px;
-    
+    padding:  10px 5px 15px 10px;  
 }
 
 image{
@@ -25,3 +25,4 @@ image{
     display: inline-block;
     
 }
+

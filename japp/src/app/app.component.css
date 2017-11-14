@@ -1,0 +1,10 @@
+.SoilHeader{
+    border-color: black;
+}
+
+.bd{
+    background-color: rgb(247, 247, 247);
+    /* border-block-end-style: groove; */
+    /* border-block-start: 1px; */
+    border-color: black;
+}
