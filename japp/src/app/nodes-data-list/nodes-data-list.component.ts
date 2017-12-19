@@ -56,7 +56,6 @@ export class NodesDataListComponent implements OnInit {
     headers.append('Content-Type', 'application/json');
     let body = JSON.stringify({ ID: 4, Name: "Red House", IP: "192.168.1.2", City: "Neo Ikonio", Country: "Greece", IsPouring: 0 });
     this.http
-    //.put('http://localhost:49608/api/node/4', body, { headers })
       .put('http://jussi.gearhostpreview.com/api/node/4', body, { headers })
       .subscribe(r => r);
       this.sleep(2);

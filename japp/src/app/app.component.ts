@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  requireLogin(): boolean{
+    if( localStorage.getItem("RedHouse") === "tricky" ){
+      return false;
+    }
+    return true;
+  }
 }

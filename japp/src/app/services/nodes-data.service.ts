@@ -26,4 +26,10 @@ export class NodesDataService {
     //return this.http.get('http://localhost:49608/api/node/4',)
     .map(res => res.json())
   }
+
+  getNodeOutData(){
+    return this.http.get('https://api.apixu.com/v1/current.json?key=fbde438837f948708d7183205170610&q=Neo_Ikonio')
+    // return this.http.get('http://localhost:49608/api/data?dataTypeID=2')
+    .map(res => res.json())
+  }
 }

@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { NodesDataListComponent } from './nodes-data-list/nodes-data-list.component';
 import { NodesDataService } from './services/nodes-data.service';
 import { PreferencesComponent } from './preferences/preferences.component';
+import { LoginComponent } from './login/login.component';
+import { OutDataListComponent } from './out-data-list/out-data-list.component';
 
 
 
@@ -14,7 +16,9 @@ import { PreferencesComponent } from './preferences/preferences.component';
   declarations: [
     AppComponent,
     NodesDataListComponent,
-    PreferencesComponent
+    PreferencesComponent,
+    LoginComponent,
+    OutDataListComponent
   ],
   imports: [
     BrowserModule,

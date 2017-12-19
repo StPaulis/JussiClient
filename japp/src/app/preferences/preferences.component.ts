@@ -11,6 +11,7 @@ export class PreferencesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.isActive = true;
   }
 
   onShowDetails(){
