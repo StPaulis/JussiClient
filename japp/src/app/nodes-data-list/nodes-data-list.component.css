@@ -1,3 +1,7 @@
+*{
+    align-items: center;
+}
+
 .btn {
     background-color: rgba(116, 245, 250, 0.13);
     border-color:  rgb(77, 75, 75);
@@ -5,6 +9,7 @@
     color: black;
     font-weight: bold;
     font-family: serif;
+    align-items: right;
 }
 
 .button {
