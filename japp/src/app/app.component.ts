@@ -14,4 +14,9 @@ export class AppComponent {
     }
     return true;
   }
+
+  logOut(){
+    localStorage.removeItem("RedHouse");
+    window.location.reload();
+  }
 }
