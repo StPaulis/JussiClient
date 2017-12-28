@@ -1,0 +1,38 @@
+<h1 class="SoilHeader">{{data.location.name}}, {{data.location.region}}
+  <img src="assets/icons/icons8-sunlight-50.png" alt="sunlight" width="60" height="60"> </h1>
+<hr>
+
+<span class="col-sm-12">
+  <div class="fa fa-user" style="text-align:center;">
+    <ul style="list-style-type: none;">
+      <li>
+        <h3 style="text-align:center;">The weather is... {{data.current.condition.text}}</h3>
+      </li>
+
+      <li>
+        <h3>
+          <img src="assets/icons/temperature.png" alt="Temp" width="50" height="50"> {{data.current.temp_c }}°C
+        </h3>
+      </li>
+
+      <li>
+        <h3>
+          <img src="assets/icons/dew-point.png" alt="Humidity" width="50" height="50"> {{data.current.humidity}}%
+        </h3>
+      </li>
+
+      <li>
+        <h3>
+          <img src="assets/icons/paper-windmill-filled.png" alt="Wind" width="50" height="50"> {{data.current.wind_kph}}, {{data.current.wind_dir}}
+        </h3>
+      </li>
+
+      <li>
+        <h3>
+          <img src="assets/icons/remote-working.png" alt="CLoud" width="50" height="50"> {{data.current.cloud}}%
+        </h3>
+      </li>
+
+    </ul>
+  </div>
+</span>
