@@ -10,27 +10,17 @@
   </nav>
   <div class="row">
 
-    <div class="col-sm-6">
-      <div class="container-fluid">
-        <h1 class="SoilHeader">Soil Measurements
-          <img src="assets/icons/Icons8-Windows-8-Healthcare-Lungs.ico" alt="Lungs" width="60" height="60"> </h1>
-        <hr>
-        <div class="col-sm-6" class="container-fluid">
-          <app-preferences></app-preferences>
-        </div>
-      </div>
+    <div class="col-sm-6 container-fluid">
+      <app-nodes-data-list></app-nodes-data-list>
     </div>
 
-    <div class="col-sm-6">
-      <div class="container-fluid">
-        <div class="col-sm-6" class="container-fluid">
-          <app-out-data-list></app-out-data-list>
-        </div>
-      </div>
+    <div class="col-sm-6 container-fluid">
+      <app-out-data-list></app-out-data-list>
     </div>
   </div>
 
 </div>
+
 <div class="login" *ngIf="requireLogin()">
   <app-login>
   </app-login>

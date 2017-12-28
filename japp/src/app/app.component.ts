@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'app';
 
   requireLogin(): boolean{
-    if( localStorage.getItem("RedHouse") === "tricky" ){
+    if( localStorage.getItem("RedHouse") === "973BD4A1" ){
       return false;
     }
     return true;
