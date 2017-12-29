@@ -9,11 +9,11 @@
     /* border-block-end-style: groove; */
     /* border-block-start: 1px; */
     border-color: black;
-    font-family: serif;
+    font-family: 'Vibur', cursive;
 }
 
 .navbar-brand{
-    font-family: serif;
+    font-family: 'Vibur', cursive;
 }
 
 hr{

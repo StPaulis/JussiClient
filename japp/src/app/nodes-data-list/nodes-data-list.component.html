@@ -17,17 +17,15 @@
     <h6>{{data.DateCreated | date:'dd/MM/yyyy HH:mm'}}</h6>
   </div>
 </span>
-<div class="form-group  button" *ngIf="!status?.status">
+<div class="form-group  button">
 
   <button class="btn btn-md btn-outline-secondary" *ngIf="!status?.status" (click)="status.status = true" (click)="waterOn($event)">
     <img src="assets/icons/Diy-Water-Hose-icon.png" alt="Water" width="25" height="25"> Water
   </button>
 
-  <div *ngIf="status?.status">
-    <button type="button" class="log-btn" *ngIf="status?.status" (click)="status.status = false" (click)="waterOff($event)">
-      <img src="assets/icons/Plants-Water-Hose-icon.png" alt="Stop" width="30" height="25"> Stop!
-    </button>
-  </div>
+  <button class="btn btn-md btn-outline-secondary" *ngIf="status?.status == true" (click)="status.status = false" (click)="waterOff($event)">
+    <img src="assets/icons/Plants-Water-Hose-icon.png" alt="Stop" width="25" height="25"> Stop!
+  </button>
 
   <div class="alert alert-danger" *ngIf="error">
     {{ error }}
