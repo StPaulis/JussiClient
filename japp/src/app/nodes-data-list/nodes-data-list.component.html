@@ -12,7 +12,7 @@
 
 
     <h3 *ngIf="data.DataTypeID == '2'">
-      <img src="assets/icons/Icons8-Windows-8-Science-Humidity.ico" alt="Humidity" width="50" height="50"> {{data.Value}}{{data.Unit}}
+      <img src="assets/icons/Icons8-Windows-8-Science-Humidity.ico" alt="Humidity" width="50" height="50"> {{data.Value}}%
     </h3>
     <h6>{{data.DateCreated | date:'dd/MM/yyyy HH:mm'}}</h6>
   </div>
@@ -20,11 +20,11 @@
 <div class="form-group  button">
 
   <button class="btn btn-md btn-outline-secondary" *ngIf="!status?.status" (click)="status.status = true" (click)="waterOn($event)">
-    <img src="assets/icons/Diy-Water-Hose-icon.png" alt="Water" width="25" height="25"> Water
+    <img src="assets/icons/Diy-Water-Hose-icon.png" alt="Water" width="25" height="25"> w @ t 3 R
   </button>
 
-  <button class="btn btn-md btn-outline-secondary" *ngIf="status?.status == true" (click)="status.status = false" (click)="waterOff($event)">
-    <img src="assets/icons/Plants-Water-Hose-icon.png" alt="Stop" width="25" height="25"> Stop!
+  <button class="btn btn-md btnStop btn-outline-secondary" *ngIf="status?.status == true" (click)="status.status = false" (click)="waterOff($event)">
+    <img src="assets/icons/Plants-Water-Hose-icon.png" alt="Stop" width="25" height="25"> S t 0 P
   </button>
 
   <div class="alert alert-danger" *ngIf="error">
