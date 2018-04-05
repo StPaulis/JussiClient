@@ -13,13 +13,13 @@ import { NodesDataService } from './../services/nodes-data.service';
 export class OutDataListComponent implements OnInit {
 
   public data: Observable<OutData>;
-  constructor(private http: Http,private nodeDataService: NodesDataService) { }
+  constructor(private http: Http, private nodeDataService: NodesDataService) { }
 
   ngOnInit() {
     this.nodeDataService.getNodeOutData()
-    .subscribe(status => { 
+    .subscribe(status => {
       this.data = status;
-      console.log(this.data,status);
+      console.log(this.data, status);
     });
   }
 
