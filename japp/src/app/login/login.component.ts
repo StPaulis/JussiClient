@@ -9,7 +9,7 @@ import { doesNotThrow } from 'assert';
 })
 export class LoginComponent implements OnInit {
 
-  user = "";
+  user = '';
   pass= '';
   constructor() { }
 
@@ -25,14 +25,13 @@ export class LoginComponent implements OnInit {
 
   isSuccess(): boolean {
 
-    console.log(this.pass,this.user);
-    if (this.pass === "tricky" && this.user === "RedHouse") {
-      localStorage.setItem("RedHouse", "973BD4A1");
+    console.log(this.pass, this.user);
+    if (this.pass === 'tricky' && this.user === 'RedHouse') {
+      localStorage.setItem('RedHouse', '973BD4A1');
       window.location.reload();
       return true;
-    }
-    else {
-      alert("Wrong Credentials");
+    }else {
+      alert('Wrong Credentials');
     }
     return false;
   }

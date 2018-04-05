@@ -8,15 +8,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
 
-  requireLogin(): boolean{
-    if( localStorage.getItem("RedHouse") === "973BD4A1" ){
+  requireLogin(): boolean {
+    if ( localStorage.getItem('RedHouse') === '973BD4A1' ) {
       return false;
     }
     return true;
   }
 
-  logOut(){
-    localStorage.removeItem("RedHouse");
+  logOut() {
+    localStorage.removeItem('RedHouse');
     window.location.reload();
   }
 }
