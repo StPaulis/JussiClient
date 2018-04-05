@@ -6,18 +6,18 @@
   <div class="fa fa-user" style="text-align:center;">
     <ul style="list-style-type: none;">
       <li>
-        <h3 style="text-align:center;">The weather is... {{(data.current | async)?.Current.condition.text}}</h3>
+        <h3 style="text-align:center;">The weather is... {{(data | async)?.Current.condition.text}}</h3>
       </li>
 
       <li>
         <h3>
-          <img src="assets/icons/temperature.png" alt="Temp" width="50" height="50"> {{(data.current | async)?.Current.temp_c }}°C
+          <img src="assets/icons/temperature.png" alt="Temp" width="50" height="50"> {{(data | async)?.Current.temp_c }}°C
         </h3>
       </li>
 
       <li>
         <h3>
-          <img src="assets/icons/dew-point.png" alt="Humidity" width="50" height="50"> {{(data.current | async)?.Current.humidity}}%
+          <img src="assets/icons/dew-point.png" alt="Humidity" width="50" height="50"> {{(data | async)?.Current.humidity}}%
         </h3>
       </li>
 
