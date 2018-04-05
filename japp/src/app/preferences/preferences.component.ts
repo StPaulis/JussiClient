@@ -14,7 +14,7 @@ export class PreferencesComponent implements OnInit {
     this.isActive = true;
   }
 
-  onShowDetails(){
+  onShowDetails() {
     this.isActive = !this.isActive;
   }
 

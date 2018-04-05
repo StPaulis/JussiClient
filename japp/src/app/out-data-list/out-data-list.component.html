@@ -1,4 +1,4 @@
-<h1 class="SoilHeader">{{data.location?.name}}, {{data.location?.region}}
+<h1 class="SoilHeader">{{( data | async)?.Location.name}}, {{ ( data | async)?.Location.region }}
   <img src="assets/icons/icons8-sunlight-50.png" alt="sunlight" width="60" height="60"> </h1>
 <hr>
 
@@ -6,18 +6,18 @@
   <div class="fa fa-user" style="text-align:center;">
     <ul style="list-style-type: none;">
       <li>
-        <h3 style="text-align:center;">The weather is... {{data.current?.condition.text}}</h3>
+        <h3 style="text-align:center;">The weather is... {{(data.current | async)?.Current.condition.text}}</h3>
       </li>
 
       <li>
         <h3>
-          <img src="assets/icons/temperature.png" alt="Temp" width="50" height="50"> {{data.current?.temp_c }}°C
+          <img src="assets/icons/temperature.png" alt="Temp" width="50" height="50"> {{(data.current | async)?.Current.temp_c }}°C
         </h3>
       </li>
 
       <li>
         <h3>
-          <img src="assets/icons/dew-point.png" alt="Humidity" width="50" height="50"> {{data.current?.humidity}}%
+          <img src="assets/icons/dew-point.png" alt="Humidity" width="50" height="50"> {{(data.current | async)?.Current.humidity}}%
         </h3>
       </li>
 
