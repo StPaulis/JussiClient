@@ -1,26 +1,31 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Http } from '@angular/http';
-import {OutData} from './out-data';
+import { OutData } from './out-data';
 import { Observable } from 'rxjs/Observable';
 import { NodesDataService } from './../services/nodes-data.service';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-out-data-list',
   templateUrl: './out-data-list.component.html',
-  styleUrls: ['./out-data-list.component.css'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./out-data-list.component.css']
 })
-export class OutDataListComponent implements OnInit {
+export class OutDataListComponent implements OnInit, OnDestroy {
 
-  public data: Observable<OutData>;
-  constructor(private http: Http, private nodeDataService: NodesDataService) { }
+  dataDs: OutData = null;
+  public sub: Subscription;
+  constructor(private http: Http) { }
 
   ngOnInit() {
-    this.nodeDataService.getNodeOutData()
-    .subscribe(status => {
-      this.data = status;
-      console.log(this.data, status);
-    });
+    // this.sub = this.nodeDataService.getNodeOutData()
+    //   .subscribe(status => {
+    //     this.dataDs = status;
+    //   });
+    this.sub = this.http.get('https://api.apixu.com/v1/current.json?key=fbde438837f948708d7183205170610&q=Neo_Ikonio')
+      .map(res => res.json()).subscribe(res => this.dataDs = res);
   }
 
+  ngOnDestroy() {
+    this.sub.unsubscribe();
+  }
 }

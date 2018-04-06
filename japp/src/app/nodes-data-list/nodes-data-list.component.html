@@ -6,13 +6,13 @@
 
   <div class="form-group " style="display: inline-block; margin-left: 36%">
     <h3 *ngIf="data.DataTypeID == '1'">
-      <img src="assets/icons/Icons8-Windows-8-Ecommerce-Temperature-Sensitive.ico" alt="Temperature" width="50" height="50"> {{data.Value}}°C
+      <img src="assets/icons/temperature.png" alt="Temperature" width="50" height="50"> {{data.Value}}°C
     </h3>
     <i class="fa fa-user"></i>
 
 
     <h3 *ngIf="data.DataTypeID == '2'">
-      <img src="assets/icons/Icons8-Windows-8-Science-Humidity.ico" alt="Humidity" width="50" height="50"> {{data.Value}}%
+      <img src="assets/icons/dew-point.png" alt="Humidity" width="50" height="50"> {{data.Value}}%
     </h3>
     <h6>{{data.DateCreated | date:'dd/MM/yyyy HH:mm'}}</h6>
   </div>

@@ -1,6 +1,6 @@
 
 
-export interface OutData {
+export class OutData {
 
     location: Location;
     current: Current;

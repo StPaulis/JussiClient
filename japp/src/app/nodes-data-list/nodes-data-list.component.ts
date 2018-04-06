@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Http, Response, Headers, RequestOptions, URLSearchParams } from '@angular/http'
+import { Http, Response, Headers, RequestOptions, URLSearchParams } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { NodesDataService } from './../services/nodes-data.service';
 import { NodesData } from './../nodes-data';
@@ -27,7 +27,7 @@ export class NodesDataListComponent implements OnInit {
 
   dataArray: Array<NodesData> = [];
   status: Node;
-  error: string = '';
+  error: '';
   constructor(private nodeDataService: NodesDataService,
     private http: Http
   ) {
@@ -39,41 +39,40 @@ export class NodesDataListComponent implements OnInit {
 
     this.nodeDataService.getNodeTemp()
       .subscribe(
-      data => this.dataArray = [data, ...this.dataArray],
-      error => this.error = error.statusText
+        data => this.dataArray = [data, ...this.dataArray],
+        error => this.error = error.statusText
       );
 
     this.nodeDataService.getNodeHum()
       .subscribe(
-      data => this.dataArray = [data, ...this.dataArray],
-      error => this.error = error.statusText
+        data => this.dataArray = [data, ...this.dataArray],
+        error => this.error = error.statusText
       );
 
   }
 
   public waterOn(event) {
-    let headers = new Headers;
+    const headers = new Headers;
     headers.append('Content-Type', 'application/json');
-    let body = JSON.stringify({ ID: 4, Name: "Red House", IP: "192.168.1.2", City: "Neo Ikonio", Country: "Greece", IsPouring: 0 });
+    const body = JSON.stringify({ ID: 4, Name: 'Red House', IP: '192.168.1.2', City: 'Neo Ikonio', Country: 'Greece', IsPouring: 0 });
     this.http
       .put('http://jussi.gearhostpreview.com/api/node/4', body, { headers })
       .subscribe(r => r);
-      this.sleep(2);
+    this.sleep(2);
   }
 
   public waterOff(event) {
-    let headers = new Headers;
+    const headers = new Headers;
     headers.append('Content-Type', 'application/json');
-    let body = JSON.stringify({ ID: 4, Name: "Red House", IP: "192.168.1.2", City: "Neo Ikonio", Country: "Greece", IsPouring: 1 });
+    const body = JSON.stringify({ ID: 4, Name: 'Red House', IP: '192.168.1.2', City: 'Neo Ikonio', Country: 'Greece', IsPouring: 1 });
     this.http
       .put('http://jussi.gearhostpreview.com/api/node/4', body, { headers })
       .subscribe(r => r);
-      this.sleep(2);
+    this.sleep(2);
   }
   // @Input('dataArray') dataAr: NodesData;
-  sleep(seconds) 
-  {
-    var e = new Date().getTime() + (seconds * 1000);
-    while (new Date().getTime() <= e) {}
+  sleep(seconds) {
+    const e = new Date().getTime() + (seconds * 1000);
+    while (new Date().getTime() <= e) { }
   }
 }
